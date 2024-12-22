@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Mono', monospace;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+    margin: 0;
+    padding: 0;
+
+    --sand: #E6E5DF;
+    --black-wash: #0C0C0C;
+
+    /* Light theme */
+    --background-color: var(--sand);
+    --text-color: var(--black-wash);
+
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+a {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+header {
+    position: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem;
+    gap: 4rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 4rem;
+    max-width: 920px;
+    gap: 1rem;
+}
+
+.logo {
+    height: 120px;
+    width: 20px;
+    background-color: var(--text-color);
+    margin: 2rem 0;
+}
+
+footer {
+    right: 0;
+    bottom: 0;
+}
+
+footer container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2rem 4rem;
+    border-top: 1px solid var(--text-color);
+}
+
+footer container .left, footer container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+
+footer a {
+    text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+/* Dark theme */
+    body {
+        --background-color: var(--black-wash);
+        --text-color: var(--white-wash);
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    nav {
+        padding: 2rem;
+    }
+
+    footer container .right {
+        display: none;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    footer container {
+        padding: 2rem;
+    }
+}
