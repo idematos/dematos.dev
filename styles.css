@@ -25,13 +25,13 @@ body {
 h1 {
     font-size: 1.8rem;
     font-weight: 600;
-    margin: 0;
+    margin: 1rem 0;
 }
 
 h2 {
     font-size: 1.2rem;
     font-weight: 600;
-    margin: 0;
+    margin: 0.5rem 0;
 }
 
 h3 {
@@ -45,6 +45,19 @@ p {
     font-weight: 400;
 }
 
+q {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+cite {
+    font-size: 0.9rem;
+}
+
+cite::before {
+    content: "— ";
+}
+
 a {
     text-decoration: underline;
     cursor: pointer;
@@ -53,7 +66,6 @@ a {
 
 ul {
     padding-left: 2rem;
-    /* list-style: none; */
 }
 
 ul li {
@@ -96,6 +108,7 @@ nav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 nav ul a {
@@ -126,7 +139,7 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1rem 4rem;
+    padding: 0.5rem 4rem;
     gap: 1rem;
 }
 
@@ -198,19 +211,40 @@ footer a {
 }
 
 @media only screen and (max-width: 920px) {
-    nav {
-        padding: 2rem;
+    h1 {
+        font-size: 1.3rem;
     }
 
-    footer container .right {
-        display: none;
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    nav {
+        padding: 2rem;
+        gap: 2rem;
     }
 
     section {
         padding: 2rem;
     }
 
+    .main-photo-caption {
+        padding-left: 2rem;
+    }
+
     footer container {
         padding: 2rem;
+    }
+
+    footer container .right {
+        display: none;
     }
 }
