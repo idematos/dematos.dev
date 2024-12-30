@@ -23,13 +23,14 @@ body {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 1rem 0;
+    width: 460px;
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin: 0.5rem 0;
 }
@@ -37,11 +38,17 @@ h2 {
 h3 {
     font-size: 1rem;
     font-weight: 600;
-    margin: 0;
+    margin-top: 0.5rem;
+}
+
+h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.3rem;
 }
 
 p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 400;
 }
 
@@ -51,7 +58,7 @@ q {
 }
 
 cite {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 cite::before {
@@ -170,7 +177,6 @@ section {
     align-items: center;
     justify-content: space-between;
     padding-left: 4rem;
-    padding-bottom: 1rem;
 }
 
 .page-size {
@@ -212,11 +218,11 @@ footer a {
 
 @media only screen and (max-width: 920px) {
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     h3 {
