@@ -12,4 +12,4 @@ http-server
 
 
 ## License
-The platform code is under the [MIT License](https://opensource.org/license/MIT). The assets and text content are under the [BY-NC-SA4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en).
+The source code is under the [MIT License](https://opensource.org/license/MIT). The assets and text content are under the [BY-NC-SA4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en).
