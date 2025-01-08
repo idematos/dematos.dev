@@ -19,20 +19,20 @@
             <li>
                 <strong><a href="/research/mathematics">mathematics</a></strong>
             </li>
-            <li>
+            <!-- <li>
                 <a href="/research/philosophy">philosophy</a>
-            </li>
+            </li> -->
         </ul>
         <ul>
-            <li>
+            <!-- <li>
                 <a href="/research/mathematics/geometry">geometry</a>
-            </li>
+            </li> -->
             <li>
                 <strong><a href="/research/mathematics/number">number</a></strong>
             </li>
-            <li>
+            <!-- <li>
                 <a href="/research/mathematics/statistics">statistics</a>
-            </li>
+            </li> -->
         </ul>
         <ul>
             <li>
@@ -48,10 +48,96 @@
     <main>
         <content>
             <section>
-                <h1>Mathematical Induction.</h1>
-                
+                <h1>
+                    One of the most powerful proofing methods, and also a very subtle and delicate concept.
+                </h1>
             </section>
-            
+
+            <section>
+                <p>
+                    Intuitively, natural numbers are numbers of the form:
+                </p>
+
+                <p><b>1</b>, <b>2</b> = 1 + 1, <b>3</b> = 2 + 1 = (1 + 1) + 1, ...</p>
+
+                <p>and so on infinitely.</p>
+
+                <p>To prove that a property holds for <b>all</b> natural numbers it is sufficient to show that</p>
+
+                <ul style="list-style: lower-roman;">
+                    <li>
+                        <p>it holds for the number 1; and that</p>
+                    </li>
+
+                    <li>
+                        <p>when it holds for a natural number <i>n</i>, then it also holds for its successor, i.e., <i>n + 1</i>.</p>
+                    </li>
+                </ul>
+
+                <p>This method is called Mathematical Induction.</p>
+            </section>
+
+            <section>
+                <h2>Sum of the first <i>n</i> odd numbers</h2>
+                <p>Adding the first odd numbers, you can notice a pattern.</p>
+                <ul style="list-style: none;">
+                    <li><p>1 = 1 = 1²</p></li>
+                    <li><p>1 + 3 = 4 = 2²</p></li>
+                    <li><p>1 + 3 + 5 = 9 = 3²</p></li>
+                    <li><p>1 + 3 + 5 + 7 = 16 = 4²</p></li>
+                    <li><p>1 + 3 + 5 + 7 + 9 = 25 = 5²</p></li>
+                    <li><p>1 + 3 + 5 + 7 + 9 + 11 = 36 = 6²</p></li>
+                </ul>
+                <p>
+                    It seems that the sum of the first <i>n</i> odd numbers is always equal to <i>n²</i>.
+                    Well, it is impossible to test this property for all natural numbers, as they are infinite.
+                    But it is possible to prove it by induction, i.e., by showing that (i) and (ii) hold.
+                </p>
+                <p>
+                    Note that (i) is valid, since 1 = 1². Suppose now that, for some natural <i>n</i>,
+                </p>
+                <p>
+                    1 + 3 + 5 + 7 + 9 + ... + (2<i>n</i> − 1) = <i>n</i>²
+                </p>
+                <p>
+                    is true. Adding 2<i>n</i> + 1, which is the next odd number after 2<i>n</i> − 1, 
+                    to both sides of the above equality, we obtain the equality (also true):
+                </p>
+                <p>
+                    1 + 3 + ... + (2<i>n</i> − 1) + (2<i>n</i> + 1) = <i>n</i>² + 2<i>n</i> + 1
+                </p>
+                <p>
+                    Since <i>n</i>² + 2<i>n</i> + 1 = (<i>n</i> + 1)², we have:
+                </p>
+                <p>
+                    1 + 3 + ... + (2<i>n</i> − 1) + (2<i>n</i> + 1) = (<i>n</i> + 1)²
+                </p>
+                <p>
+                    This shows that the property is true for <i>n</i> + 1 every time that it is true for <i>n</i> (ii). 
+                    Therefore, by induction, it is valid for every natural number <i>n</i>.
+                </p>
+            </section>
+
+            <section>
+                <h2>The logical basis</h2>
+                <p>
+                    It might seem, in the demonstration above, that we are assuming the property is true for <i>n</i> 
+                    in order to deduce that it is true for <i>n</i> + 1, and then concluding that it is always true, 
+                    that is, that we are using the thesis to prove the theorem. But no.
+                    In fact, this is the most subtle aspect of the method. 
+                    Given a natural number <i>n</i>, there are two possibilities: 
+                </p>
+                <ul style="list-style: lower-latin;">
+                    <li><p>The property is true; or</p></li>
+                    <li><p>The property is false.</p></li>
+                </ul>
+                <p>
+                    Hypothesis (ii) of the method does not require us to assume that the property is true for all natural numbers <i>n</i>.
+                    It may, eventually, be false for some values of <i>n</i>, or even for all values of <i>n</i>. What hypothesis (ii) requires 
+                    is that whenever some <i>n</i> belongs to category (a) above, then <i>n</i> + 1 also belongs to that same category; requiring 
+                    nothing when <i>n</i> belongs to category (b).
+                </p>
+            </section>
             <section class="page-size">
                 <p>8.53 kB</p>
             </section>
