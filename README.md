@@ -1,6 +1,6 @@
 # dematos.dev
 
-The source code for [dematos.dev](https://dematos.dev) website.
+The source code for [dematos.dev](https://dematos.dev).
 
 ## Usage
 
