@@ -67,9 +67,10 @@ cite::before {
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
     color: var(--text-color);
+    border-bottom: 1px solid var(--text-color);
 }
 
 ul {
@@ -125,7 +126,8 @@ nav ul a {
 }
 
 nav ul a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-color);
 }
 
 strong {
@@ -153,6 +155,14 @@ section {
     align-items: flex-start;
     padding: 0 4rem;
     gap: 1rem;
+}
+
+card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--text-color);
+    padding: 1vh 1.5vh;
 }
 
 .logo {
@@ -260,7 +270,7 @@ footer a {
     }
 
     nav ul a {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
         opacity: 1;
     }
 
