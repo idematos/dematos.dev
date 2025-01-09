@@ -9,6 +9,17 @@
   <body>
     <header>
       <nav>
+        <ul class="hide-on-mobile">
+            <li>
+                <a href="/">about</a>
+            </li>
+            <li>
+                <strong><a href="/research">research</a></strong>
+            </li>
+            <li>
+                <a href="/photography">photography</a>
+            </li>
+        </ul>
         <ul>
             <li>
                 <a href="/research/computing">computing</a>
@@ -24,18 +35,18 @@
             </li>
         </ul>
         <ul>
-            <li>
+            <!-- <li>
                 <a href="/research/philosophy/ethics">ethics</a>
-            </li>
+            </li> -->
             <li>
                 <strong><a href="/research/philosophy/logic">logic</a></strong>
             </li>
         </ul>
-        <ul>
+        <!-- <ul>
             <li>
                 <a href="/research/philosophy/logic/fallacy">fallacy</a>
             </li>
-        </ul>
+        </ul> -->
       </nav>
     </header>
 
@@ -50,18 +61,212 @@
 
             <section>
                 <h1>Logic studies the process of argumentation.</h1>
-                <p>
-                    A logical argument is a sequence of propositions, such that the initial ones are the premises and the 
-                    last one is the conclusion.
+                <p>                    
+                    A <b>proposition</b> is any statement that can be judged as either true or false. 
+                    Thus, there is always a binary value attributed to it: its <b>truth value</b>, 
+                    which can be either true (<i>T</i>) or false (<i>F</i>), with no third option. 
+                    This property is called the Principle of the Excluded Middle. 
+                    Together with the Principle of Identity (which states that every being is identical to itself) 
+                    and the Principle of Non-Contradiction (which states that no proposition can be both true and false simultaneously), 
+                    they form the foundation of Aristotle's classical logic.
                 </p>
             </section>
+            
             <section>
+                <p>
+                    A logical <b>argument</b> is a sequence of propositions, such that the initial ones are the premises and the 
+                    last one is the conclusion.
+                </p>
                 <p><b>First premise</b>: <i>Zoe is only happy when she plays the guitar.</i></p>
                 <p><b>Second premise</b>: <i>Zoe is not playing the guitar.</i></p>
                 <p><b>Conclusion</b>: <i>Therefore, Zoe is not happy.</i></p>
             </section>
+
+            <section>
+                <p>
+                    An argument also consists of <b>connectives</b>, which are the structures responsible for combining one 
+                    or more propositions to produce a new, more complex proposition.
+                </p>
+                
+                <h3>Negation (¬)</h3>
+                <p>
+                    It has the function of changing the meaning of a proposition to the opposite meaning. 
+                    For example, given the proposition <i>p</i>: “<i>I know how to drive</i>”, the proposition ¬<i>p</i> will be “<i>I do not know how to drive</i>”.
+                </p>
+                <p>
+                    The propositions <i>p</i> and ¬<i>p</i> always have different logical values. That is, when <i>p</i> is true, ¬<i>p</i> is false and vice versa. 
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i>p</i></th>
+                            <th><i>¬p</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i>T</i></td>
+                            <td><i>F</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>F</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Conjunction (∧) and disjunction (∨)</h3>
+                <p>
+                    It is used to combining two propositions <i>p</i> and <i>q</i>. 
+                    While the conjunction represents the sense of complementarity, the disjunction represents the sense of simultaneity. 
+                    For example, for the sentence “<i>The sky is blue <b>or</b> the sea is red</i>” to be true, it is enough that one of the sentences: 
+                    “<i>The sky is blue</i>” or “<i>The sea is red</i>” is true. On the other hand, for the sentence “<i>The sky is blue <b>and</b> the sea is red</i>” 
+                    to be true, it is necessary that both sentences are true. 
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i>p</i></th>
+                            <th><i>q</i></th>
+                            <th><i>p ∧ q</i></th>
+                            <th><i>p ∨ q</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>T</i></td>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>F</i></td>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                            <td><i>V</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Conditional (→)</h3>
+                <p>
+                    It is used to formulate a proposition that conveys an idea of cause and effect. 
+                    An example of a sentence that has this meaning is <i>“If it breaks, then she fix it</i>”. 
+                    Symbolically, this sentence is represented as <i>p → q</i>, where  <i>p</i>: “<i>It breaks</i>” and <i>q</i>: “<i>She fix it</i>”. 
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i>p</i></th>
+                            <th><i>q</i></th>
+                            <th><i>p → q</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>T</i></td>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>F</i></td>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Associated conditional propositions</h4>
+
+                <ul>
+                    <li>
+                        <p><b>Contrapositive (<i>¬q → ¬p</i>)</b>: <i>If she doesn't fix it, then it doesn't break</i>.</p>
+                    </li>
+                    <li>
+                        <p><b>Reciprocal (<i>q → p</i>)</b>: <i>If she fixes it, then it breaks</i>.</p>
+                    </li>
+                    <li>
+                        <p><b>Inverse (<i>¬p → ¬q</i>)</b>: <i>If it doesn't break, then she doesn't fix it</i>.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Selection task</h2>
+                <p>
+                    This is an adaptation of <a href="https://en.wikipedia.org/wiki/Wason_selection_task" target="_blank">an experiment proposed by Wason</a> 
+                    that sought to understand whether people knew how to intuitively use classical logic.
+                </p>
+                <p>
+                    The five cards <b>2</b>, <b>3</b>, <b>A</b>, <b>E</b>, <b>M</b> are on a table, and each has a number on one side and a letter on the other. 
+                    We must decide whether the following proposition is true:  
+                </p>
+                <p>
+                    "<i>If a card has a vowel on one side, then it has an even number on the other side.</i>"
+                </p>
+                <p>
+                    What is the smallest number of cards we need to turn over to decide correctly?
+                </p>
+            </section>
+            
+            <section>
+                <div style="display: flex; flex-direction: row; justify-content: space-around; width: 100%;">
+                    <card>
+                        <h2>2</h2>
+                    </card>
+                    <card>
+                        <h2>3</h2>
+                    </card>
+                    <card>
+                        <h2>A</h2>
+                    </card>
+                    <card>
+                        <h2>E</h2>
+                    </card>
+                    <card>
+                        <h2>M</h2>
+                    </card>
+                </div>
+            </section>
+
+            <section>
+                <p>
+                    Well, of course we have to turn over cards <b>A</b> and <b>E</b>, which are vowels.
+                    In fact, if on the other side of them there is an odd number, the proposition will be false.
+                    Note that we do not need to turn over card <b>M</b> (which is a consonant), because, regardless of the number on the other side,
+                    the proposition will never be invalidated. We have to turn over card <b>3</b>, because if we have a vowel on the other side,
+                    the proposition will be false. Finally, it is not necessary to turn over card <b>2</b>.
+                    Regardless of the letter on the other side, the sentence cannot be invalidated. Therefore, we have to turn over three cards: <b>3</b>, <b>A</b>, <b>E</b>.
+                </p>
+            </section>
+            
             <section class="page-size">
-                <p>108.53 kB</p>
+                <p>109.53 kB</p>
             </section>
         </content>
     </main>
