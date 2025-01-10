@@ -36,24 +36,24 @@ h2 {
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-top: 0.5rem;
 }
 
 h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-top: 0.3rem;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 400;
 }
 
 q {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-style: italic;
     max-width: 460px;
 }
