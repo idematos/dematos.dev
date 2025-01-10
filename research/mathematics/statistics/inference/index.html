@@ -1,0 +1,138 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../../../../media/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../../styles.css" />
+    <title>Inference - Isabela de Matos</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="hide-on-mobile">
+            <li>
+                <a href="/">about</a>
+            </li>
+            <li>
+                <strong><a href="/research">research</a></strong>
+            </li>
+            <li>
+                <a href="/photography">photography</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/research/computing">computing</a>
+            </li>
+            <li>
+                <a href="/research/linguistics">linguistics</a>
+            </li>
+            <li>
+                <strong><a href="/research/mathematics">mathematics</a></strong>
+            </li>
+            <li>
+                <a href="/research/philosophy">philosophy</a>
+            </li>
+        </ul>
+        <ul>
+            <!-- <li>
+                <a href="/research/mathematics/geometry">geometry</a>
+            </li> -->
+            <li>
+                <a href="/research/mathematics/number">number</a>
+            </li>
+            <li>
+                <strong><a href="/research/mathematics/statistics">statistics</a></strong>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong><a href="/research/mathematics/statistics/inference">inference</a></strong>
+            </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <content>
+            <section>
+                <h1>To infer is to obtain approximate information about a population from a sample.</h1>
+                <p>
+                    Simply put, by choosing a random sample from a population and calculating its mean, 
+                    we can infer the value of the population mean. The larger the sample size, 
+                    the closer these values tend to be. This fact is known as the Central Limit Theorem.
+                </p>
+            </section>
+
+            <section>
+                <h2>Estimating the value of π</h2>
+                <p>
+                    Consider a circle of radius 1 inscribed in a square of side 2.
+                </p>
+            </section>
+
+            <section>
+                <div class="square">
+                    <div class="circle"></div>
+                </div>
+            </section>
+
+            <section>
+                <p>
+                    Suppose we randomly draw a point from the inside of the square. 
+                    If all points have the same probability of being drawn, the probability of choosing a point inside the circle is
+                </p>
+
+                <p>(area of circle / area of square) = π/4</p>
+
+                <p>
+                    Now, imagine that we also randomly draw <i>n</i> points inside the square. If we count how many points were chosen inside the circle, we can expect that
+                </p>
+
+                <p>(number of points inside the circle / total number of points chosen) ~ π/4</p>
+
+                <p>
+                    Furthermore, as the total number of points chosen increases, the computed value of the ratio
+                </p>
+
+                <p>(number of points inside the circle / total number of points chosen)</p>
+
+                <p>will get closer to the true value of π/4.</p>
+            </section>
+
+            <section>
+                <p>This experiment can be implemented in <a href="https://r-project.org" target="_blank">R</a> using a Monte Carlo method:</p>
+
+                <code>
+                    <pre>
+n <- 1000
+x.pos <- runif(n, min = -1, max = 1)
+y.pos <- runif(n, min = -1, max = 1)
+local.pos <- ifelse(x.pos^2 + y.pos^2 <= 1, TRUE, FALSE)
+inside <- length (which(local.pos == TRUE))
+4*(inside/n)
+                    </pre>
+                </code>
+
+                <p>The larger the value assigned to <i>n</i> in the first line, the closer the output will be to <i>π</i>.</p>
+            </section>
+
+            <section class="page-size">
+                <p>4.29 kB</p>
+            </section>
+        </content>
+    </main>
+    
+    <footer>
+      <container>
+        <div class="left">
+            <p>&copy; Isabela de Matos</p>
+            <p><b>isabela [at] dematos [dot] dev</b></p>
+        </div>
+        <div class="right">
+            <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">BY-NC-SA4.0</a></p>
+        </div>
+      </container>
+    </footer>
+  </body>
+</html>
