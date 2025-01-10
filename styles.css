@@ -11,12 +11,17 @@ body {
     margin: 0;
     padding: 0;
 
+    --font-code: 'Fira Mono', monospace;
+
     --sand: #E6E5DF;
+    --light-grey: #D9D9D9;
+    --dark-grey: #323232;
     --black-wash: #0C0C0C;
 
     /* Light theme */
     --background-color: var(--sand);
     --text-color: var(--black-wash);
+    --grey: var(--light-grey);
 
     color: var(--text-color);
     background-color: var(--background-color);
@@ -30,19 +35,19 @@ h1 {
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 0.5rem 0;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 600;
     margin-top: 0.5rem;
 }
 
 h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-top: 0.3rem;
 }
@@ -195,6 +200,40 @@ card {
     padding-left: 4rem;
 }
 
+pre {
+    overflow-x: scroll;
+    padding-top: 1rem;
+}
+
+code {
+    color: var(--text-color);
+    font-family: var(--font-code);
+    background-color: var(--grey);
+    padding: 0 1.5rem;
+    line-height: 2;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    border: 1px solid var(--text-color);
+    background-color: var(--grey);
+}
+
+.circle {
+    width: 125px;
+    height: 125px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    background-color: var(--background-color);
+}
+
 .page-size {
     padding-top: 2rem;
 }
@@ -230,6 +269,7 @@ footer a {
     body {
         --background-color: var(--black-wash);
         --text-color: var(--sand);
+        --grey: var(--dark-grey);
     }
 }
 
@@ -261,6 +301,10 @@ footer a {
     
     cite {
         font-size: 0.7rem;
+    }
+
+    code {
+        font-size: 0.75rem;
     }
 
     nav {
