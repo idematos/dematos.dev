@@ -28,6 +28,7 @@ body {
 }
 
 h1 {
+    line-height: 1.5;
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0.5rem 0;
@@ -83,6 +84,10 @@ ul {
     gap: 0.25rem;
 }
 
+ul li {
+    padding: 0.35rem 0;
+}
+
 table {
     border: 1px solid var(--text-color);
     margin: 1rem 0;
@@ -124,13 +129,17 @@ nav ul {
     padding: 0;
 }
 
-nav ul a {
+nav ul li {
+    padding: 0;
+}
+
+nav ul li a {
     font-size: 1.1rem;
     text-decoration: none;
     border: none;
 }
 
-nav ul a:hover {
+nav ul li a:hover {
     text-decoration: none;
     border-bottom: 1px solid var(--text-color);
 }
