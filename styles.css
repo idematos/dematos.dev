@@ -239,6 +239,25 @@ code {
     background-color: var(--background-color);
 }
 
+.wason-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.wason-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    height: 60px;
+    width: 45px;
+    border: 1px solid var(--text-color);
+}
+
 .page-size {
     padding-top: 2rem;
 }
