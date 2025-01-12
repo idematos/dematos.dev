@@ -81,6 +81,7 @@ a {
 
 ul {
     padding-left: 2rem;
+    font-size: 1.05rem;
 }
 
 ul li {
@@ -258,7 +259,7 @@ code {
     border: 1px solid var(--text-color);
 }
 
-.page-size {
+.page-size, .resources {
     padding-top: 2rem;
 }
 
@@ -364,6 +365,7 @@ footer a {
 
     ul {
         padding-left: 1rem;
+        font-size: 0.75rem;
     }
 
     ul li {
