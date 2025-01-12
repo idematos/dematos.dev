@@ -216,13 +216,55 @@
                         <p><b>Inverse (<i>¬p → ¬q</i>)</b>: <i>If it doesn't break, then she doesn't fix it</i>.</p>
                     </li>
                 </ul>
+
+                <h3>Biconditional (↔)</h3>
+                <p>
+                    It indicates what is the <i>equivalence relation</i> between <i>p</i> and <i>q</i> in the following sense: 
+                    <i>p ↔ q</i> will be true if <i>p</i> and <i>q</i> are both true or both false; and it will be false otherwise.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i>p</i></th>
+                            <th><i>q</i></th>
+                            <th><i>p ↔ q</i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>T</i></td>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>F</i></td>
+                            <td><i>T</i></td>
+                            <td><i>F</i></td>
+                        </tr>
+                        <tr>
+                            <td><i>F</i></td>
+                            <td><i>F</i></td>
+                            <td><i>T</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    In natural language, it is said that <i>p</i> is a necessary and sufficient condition for <i>q</i>, or that <i>p</i> <b>if and only if</b> <i>q</i>.
+                </p>
             </section>
 
             <section>
                 <h2>Cards</h2>
                 <p>
                     This is an adaptation of <a href="https://en.wikipedia.org/wiki/Wason_selection_task" target="_blank">an experiment proposed by Wason</a> 
-                    that sought to understand whether people knew how to intuitively use classical logic.
+                    that sought to understand whether people knew how to intuitively use classical logic. It is stated as follows:
                 </p>
                 <p>
                     The five cards <b>2</b>, <b>3</b>, <b>A</b>, <b>E</b>, <b>M</b> are on a table, and each has a number on one side and a letter on the other. 
@@ -266,6 +308,99 @@
                     regardless of the letter on the other side, the sentence cannot be invalidated. Therefore, we have to turn over three cards: <b>3</b>, <b>A</b>, <b>E</b>.
                 </p>
             </section>
+
+            <section>
+                <h2>Gods</h2>
+                <p>
+                    This is a <a href="https://en.wikipedia.org/w/index.php?title=The_Hardest_Logic_Puzzle_Ever&oldid=906163668" target="_blank">more challenging puzzle</a>,
+                    published in The Harvard Review of Philosophy in 1996. It is stated as follows:
+                </p>
+
+                <p>
+                    Three gods A, B, and C are called, in no particular order, True, False, and Random. 
+                    True always speaks truly, False always speaks falsely, but whether Random speaks truly or falsely is a completely random matter. 
+                    Your task is to determine the identities of A, B, and C by asking three yes-no questions; each question must be put to exactly one god. 
+                    The gods understand English, but will answer all questions in their own language, in which the words for yes and no are <i>da</i> and <i>ja</i>, in some order. 
+                    You do not know which word means which.
+                </p>
+
+                This puzzle is very tricky, mainly because of the Random god, who gives meaningless answers, and the language barrier.
+                So let's first consider a simpler version before moving on to the general case.
+
+                <h4>The Puzzle Without the Language Barrier</h4>
+                
+                <p> Imagine for now that we understand the gods' language and can translate their answers into simple <i>yes</i> or <i>no</i>. So, we have:</p>
+
+                <ul style="list-style: decimal;">
+                    <li>
+                        <p>
+                            If you know that a god is either True or False (not Random), you can figure out which one is which by simply asking them something you already know the answer to.
+                            For example, by asking "Is 1 + 1 = 2?", True will say <i>yes</i>, and False will say <i>no</i>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>If you know that a god is True, you can figure out who the other two are by pointing to one of the other gods and asking "Is this Random?".</p>
+                        <ul>
+                            <li>If the answer is <i>yes</i>, that god is Random, and the remaining one must be False.</li>
+                            <li>If the answer is <i>no</i>, that god is False, and the remaining one is Random.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>If you know that a god is False, you can figure out the other two in the same way as you would in (2).</p>
+                    </li>
+                </ul>
+
+                <p>
+                    From this, we see that the key is to ask one question to identify a god who isn't Random. 
+                    Once you find that god, you can figure out if they're True or False by asking them, "Is 1 + 1 = 2?" 
+                    Then you can use the process above to identify the others.
+                </p>
+
+                <h4>Finding a Non-Random God</h4>
+
+                <p>To identify a god who isn't Random, you can ask any of the gods: "Are you True if and only if this other god is Random?" pointing to one of the other two.</p>
+
+                <ul>
+                    <li>
+                        <p>If you're asking True, they'll say <i>yes</i> if you're pointing at Random, and <i>no</i> if you're pointing at False.</p>
+                    </li>
+                    <li>
+                        <p>If you're asking False, they'll lie: they'll say <i>yes</i> if you're pointing at Random, and <i>no</i> if you're pointing at True.</p>
+                    </li>
+                    <li>
+                        <p>If you're asking Random, their answer is useless, but the god you're pointing at and the remaining god are definitely not Random.</p>
+                    </li>
+                </ul>
+
+                <p>
+                    So, if the answer is <i>yes</i>, the third god (neither the one you're pointing at nor the one you're questioning) is not Random. 
+                    If the answer is <i>no</i> the god you're pointing at is not Random.
+                </p>
+
+                <h4>The General Case</h4>
+
+                <p>
+                    Now let's return to the original puzzle, where the gods answer <i>da</i> and <i>ja</i>. The same strategy works, but with a twist.
+                </p>
+
+                <p>
+                    Before asking a question, you can start by saying, "The word <i>da</i> means <i>yes</i> if and only if…" and then follow it with the question as before. This way:
+                </p>
+
+                <ul>
+                    <li>
+                        <p>If the god would have answered <i>yes</i> in English, they'll say <i>da</i>.</p>
+                    </li>
+                    <li>
+                        <p>If the god would have answered <i>no</i> in English, they'll say <i>ja</i>.</p>
+                    </li>
+                </ul>
+
+                <p>
+                    This adjustment lets you translate the gods' answers back into <i>yes</i> or <i>no</i> and solve the puzzle the same way as before.
+                </p>
+            </section>
+
 
             <section class="resources">
                 <ul>
