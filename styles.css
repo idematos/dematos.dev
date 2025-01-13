@@ -72,6 +72,11 @@ cite::before {
     content: "— ";
 }
 
+.MathJax {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
 a {
     text-decoration: none;
     cursor: pointer;
@@ -85,7 +90,7 @@ ul {
 }
 
 ul li {
-    padding: 0.2rem 0;
+    padding: 0.25rem 0;
 }
 
 table {
@@ -176,11 +181,18 @@ card {
     padding: 1vh 1.5vh;
 }
 
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .logo {
     height: 120px;
     width: 20px;
     background-color: var(--text-color);
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 .photo-frame {
@@ -326,6 +338,10 @@ footer a {
     
     cite {
         font-size: 0.7rem;
+    }
+
+    .MathJax {
+        font-size: 0.85rem;
     }
 
     code {
