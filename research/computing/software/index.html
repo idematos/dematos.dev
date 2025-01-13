@@ -50,7 +50,7 @@
     <main>
         <content>
             <section>
-                <h1>On the energy consumption in software engineering.</h1>
+                <h1>Software energy consumption estimation with the trapezoidal rule</h1>
 
                 <p>
                     In electricity, <b>energy</b> is the amount of work required to transfer charged particles.
@@ -101,7 +101,7 @@
 
                 <div class="center">
                     $$
-                    \int ^{t_n} _ {t_0} P(t)  \ \text{d}t \approx \dfrac{\Delta t}{2} \left [ P(t_0) + 2P(t_1) + 2P(t_2) + \ldots + 2P(t_{n-1}) + 2P(t_{n}) \right ]
+                    \int ^{t_n} _ {t_0} P(t)  \ \text{d}t \approx \dfrac{\Delta t}{2} \left [ P(t_0) + \ldots + 2P(t_{n}) \right ]
                     $$
                 </div>
 
@@ -118,7 +118,7 @@ energy_consumption = np.trapz(power_sample, timestamps)
             </section>
 
             <section class="page-size">
-                <p>8.53 kB</p>
+                <p>34.58 kB</p>
             </section>
         </content>
     </main>
