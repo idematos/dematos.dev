@@ -1,0 +1,138 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../../../media/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <title>Software - Isabela de Matos</title>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+            <li>
+                <a href="/">about</a>
+            </li>
+            <li>
+                <strong><a href="/research">research</a></strong>
+            </li>
+            <li>
+                <a href="/photography">photography</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong><a href="/research/computing">computing</a></strong>
+            </li>
+            <li>
+                <a href="/research/linguistics">linguistics</a>
+            </li>
+            <li>
+                <a href="/research/mathematics">mathematics</a>
+            </li>
+            <li>
+                <a href="/research/philosophy/">philosophy</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/research/computing/algorithm/">algorithm</a>
+            </li>
+            <li>
+                <strong><a href="/research/computing/software/">software</a></strong>
+            </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <content>
+            <section>
+                <h1>On the energy consumption in software engineering.</h1>
+
+                <p>
+                    In electricity, <b>energy</b> is the amount of work required to transfer charged particles.
+                    The standard unit of measurement for energy is joule (J), but another common used unit is kilowatt-hour (kWh).
+                    Joules can be converted to/from kilowatt-hour as follows:
+                </p>
+                <div class="center">
+                    $$
+                    1\ kWh = 3,600,000\ J
+                    $$
+                </div>
+
+                <p>
+                    Simply put, <b>power</b> is the energy consumed in a given time interval. It is measured in joules per second (J/s) or watts (W).
+                    Power is used when it is more desirable to know energy efficiency than to know total energy consumption.
+                    This is why it is the metric reported in tools such as <a href="https://github.com/fenrus75/powertop" target="_blank">PowerTOP</a> 
+                    and <a href="https://manpages.ubuntu.com/manpages/bionic/man8/powerstat.8.html" target="_blank">Powerstat</a>.
+                    However, in software projects, we usually want to analyse it by use case, so we want to know its energy consumption.
+                </p>
+
+                <p>
+                    One way to estimate the energy consumption using power samples is to infer it by the values reported during the software's execution.
+                    So, given the average power consumption (\( \overline{P} \)) reported in a certain time interval (\( \Delta t \)), the energy consumption (\( E \)) will be:
+                </p>
+
+                <div class="center">
+                    $$
+                    E \approx \overline{P} \cdot \Delta t
+                    $$
+                </div>
+
+                <p>
+                    However, this estimation has a reasonable average error only when energy consumption is constant. So we will want to look at the general case.
+                    The energy consumption (\( E \)) is the integral of power consumption (\( P \)) over the interval of time needed (\([t_0,t_n]\)) 
+                    to execute a given operation:
+                </p>
+
+                <div class="center">
+                    $$
+                    E = \int ^{t_n} _ {t_0} P(t)  \ \text{d}t
+                    $$
+                </div>
+
+                <p>
+                    Power monitors do not give us the exact function \( P \), but we can approximate the value of this definite integral with the
+                    <a href="https://en.wikipedia.org/wiki/Trapezoidal_rule" target="_blank">trapezoidal rule</a>:
+                </p>
+
+                <div class="center">
+                    $$
+                    \int ^{t_n} _ {t_0} P(t)  \ \text{d}t \approx \dfrac{\Delta t}{2} \left [ P(t_0) + 2P(t_1) + 2P(t_2) + \ldots + 2P(t_{n-1}) + 2P(t_{n}) \right ]
+                    $$
+                </div>
+
+                <p>This estimation can be easily done in Python with the <a href="https://numpy.org/">numpy</a> package:</p>
+
+                <code>
+                    <pre>
+import numpy as np
+
+energy_consumption = np.trapz(power_sample, timestamps)
+                    </pre>
+                </code>
+
+            </section>
+
+            <section class="page-size">
+                <p>8.53 kB</p>
+            </section>
+        </content>
+    </main>
+    
+    <footer>
+      <container>
+        <div class="left">
+            <p>&copy; Isabela de Matos</p>
+            <p><b>isabela [at] dematos [dot] dev</b></p>
+        </div>
+        <div class="right">
+            <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">BY-NC-SA4.0</a></p>
+        </div>
+      </container>
+    </footer>
+  </body>
+</html>
