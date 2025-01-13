@@ -84,13 +84,13 @@
 
                 <p>
                     However, this estimation has a reasonable average error only when the power consumption is constant. So we will want to look at the general case.
-                    The energy consumption (\( E \)) is the integral of power consumption (\( P \)) over the interval of time needed (\([t_0,t_n]\)) 
+                    The energy consumption (\( E \)) is the integral of power consumption (\( P \)) over the interval of time needed (\([t_0,\ t_N]\)) 
                     to execute a given operation:
                 </p>
 
                 <div class="center">
                     $$
-                    E = \int ^{t_n} _ {t_0} P(t)  \ \text{d}t
+                    E = \int ^{t_N} _ {t_0} P(t)  \ \text{d}t
                     $$
                 </div>
 
@@ -101,10 +101,9 @@
 
                 <div class="center">
                     $$
-                    \int ^{t_n} _ {t_0} P(t)  \ \text{d}t \approx \dfrac{\Delta t}{2} \left [ P(t_0) + \ldots + 2P(t_{n}) \right ]
+                    \int ^{t_N} _ {t_0} P(t)  \ \text{d}t \approx \Delta t \left ( \dfrac{P(t_0) + P(t_N)}{2} + \sum ^{N-1} _{k=1} P(t_k) \right )
                     $$
                 </div>
-
                 <p>This estimation can be easily done in Python with the <a href="https://numpy.org/">numpy</a> package:</p>
 
                 <code>
