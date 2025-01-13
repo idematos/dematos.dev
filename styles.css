@@ -73,7 +73,6 @@ cite::before {
 }
 
 .MathJax {
-    font-size: 1.3rem;
     color: var(--text-color);
 }
 
@@ -337,10 +336,6 @@ footer a {
     }
     
     cite {
-        font-size: 0.7rem;
-    }
-
-    .MathJax {
         font-size: 0.7rem;
     }
 
