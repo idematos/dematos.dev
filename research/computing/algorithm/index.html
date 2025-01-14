@@ -49,115 +49,51 @@
         <content>
             <section>
                 <h1>An algorithm is a sequence of instructions to perform an action.</h1>
-                <p>Its primary characteristics are correctness, efficiency, and scalability, but here I will focus on its energy consumption.</p>
-            </section>
-
-            <section>
-                <h2>Evaluation metrics</h2>
-                <ul>
-                    <li>
-                        <p><b>Time complexity</b>: The number of operations as a function of input size.</p>
-                    </li>
-                    <li>
-                        <p><b>Space Complexity</b>: The memory usage.</p>
-                    </li>
-                    <li>
-                        <p><b>Energy Complexity</b>: The energy required to execute it.</p>
-                    </li>
-                </ul>
+                <p>
+                    There are several ways to perform an action. Each algorithm requires a different amount of energy to execute. For the purposes of this context, we can call this amount <b>energy complexity</b>.
+                </p>
 
                 <p>
-                    The energy complexity of an algorithm depends on the number of operations performed, the type of operations, and the hardware's efficiency. 
-                    Algorithms with lower time complexity generally consume less energy because they perform fewer operations.
+                    Simply put, the energy complexity of an algorithm depends on the number of operations performed, the type of operations, and the hardware's efficiency. 
+                    Algorithms with lower time complexity generally consume less energy because they perform fewer operations. 
                     For example, a merge sort (<i>O(n log n)</i>) is more energy-efficient than a bubble sort (<i>O(n²)</i>) for large datasets.
                 </p>
             </section>
 
+
             <section>
-                <h2>Optimisation</h2>
-                <p>
-                    These are some strategies that can help to reduce the energy consumption associated with algorithms and data structures.
-                </p>
-                <h3>Algorithmic Improvements</h3>
-                <h4>Complexity</h4>
-                <p>
-                    Inefficient algorithms can be replaced for those of optimal complexity. For example, when processing graphs, Dijkstra's algorithm (<i>O(V²)</i>) 
-                    can be replaced for the Fibonacci heap implementation (<i>O(V log V + E)</i>).
-                </p>
-                <h4>Redundancy</h4>
-                <ul>
-                    <li>
-                        <p>Divide-and-conquer strategies (e.g. quicksort and mergesort) process data in smaller chunks, reducing redundant computations.</p>
-                    </li>
-                    <li>
-                        <p>Dynamic programming techniques (e.g. memoisation) store intermediate results to avoid duplicate work.</p>
-                    </li>
-                    <li>
-                        <p>Lazy evaluation can delay computation until results are explicitly needed.</p>
-                    </li>
-                </ul>
-                <h4>Approximation</h4>
-                <p>
-                    When exact solutions are computationally expensive, approximation algorithms can suffice. 
-                    For example, approximate nearest-neighbour algorithms significantly reduce energy costs 
-                    in high-dimensional data searches.
-                </p>
+                <h2>Some ways to optimise algorithms and data structures</h2>
 
-                <h3>Hardware-Aware Design</h3>
-                <h4>Parallelisation</h4>
-                <p>
-                    Algorithms can be parallelised to distribute workloads across multiple cores or processing units. 
-                    For example, map-reduce frameworks allow parallel processing of large datasets.
-                </p>
-
-                <h4>Energy-Aware Instruction Sets</h4>
-                <p>
-                    Reduced-precision computation, particularly in machine learning tasks, can reduce energy consumption. 
-                    For instance, using 16-bit floating-point operations instead of 32-bit reduces energy costs with minimal accuracy loss.
-                </p>
-                
-                <h3>Scheduling and Execution</h3>
-
-                <h4>Dynamic Voltage and Frequency Scaling</h4>
-                <p>
-                    Voltage and frequency can be adjusted dynamically based on the workload. 
-                    Algorithms with non-critical tasks can execute at lower clock speeds.
-                </p>
-
-                <h4>Asynchronous Execution</h4>
-                <p>
-                    Independent tasks can be executed asynchronously. Event-driven
-                    programming models facilitate this in I/O-bound applications.
-                </p>
-
-                <h4>Batch Processing</h4>
-                <p>
-                    Similar tasks can be grouped together to minimise context-switching overhead. 
-                    For example, in web servers, batching multiple requests into a single execution 
-                    cycle reduces energy costs.
-                </p>
-
-                <h3>Data Optimisation</h3>
-                <h4>Efficient Data Structures</h4>
                 <ul>
                     <li>
                         <p>
-                            Some data structures minimise computational overhead. For example, replacing 
-                            linked lists with dynamic arrays for random access operations reduces cache misses.
+                            Replacing, when possible, algorithms with a version that achieves the same results with a lower time complexity. 
+                            For example, when processing graphs, Dijkstra's algorithm (O(V²)) can be replaced by the Fibonacci heap implementation (<i>O(V²)</i>) can be replaced for the Fibonacci heap implementation (<i>O(V log V + E)</i>).
                         </p>
                     </li>
                     <li>
                         <p>
-                            Compact data structures, such as succinct trees or bloom filters, 
-                            reduce memory usage and the associated energy cost.
+                            Using approximation algorithms when exact solutions are computationally expensive. 
+                            For example, approximate nearest-neighbour algorithms significantly reduce energy costs in high-dimensional data searches.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Reducing precision in computation, particularly in machine learning tasks. 
+                            For instance, using 16-bit floating-point operations instead of 32-bit reduces energy costs with minimal accuracy loss.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Replacing linked lists with dynamic arrays for random access operations.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Using compact data structures, such as succinct trees or bloom filters.
                         </p>
                     </li>
                 </ul>
-                <h4>Data Compression</h4>
-                <p>
-                    Compressed input data reduces I/O costs. For example, gzip compression 
-                    on files reduces the amount of data read and written to disk.
-                </p>
             </section>
 
             <section class="page-size">
