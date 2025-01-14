@@ -50,9 +50,11 @@
             <section>
                 <h1>An algorithm is a sequence of instructions to perform an action.</h1>
                 <p>
-                    Each algorithm requires a different amount of energy to execute. This amount is its <b>energy complexity</b>.
-                    The energy complexity of an algorithm depends on the number of operations performed, the type of those operations, and the efficiency of the hardware on which it is running. 
+                    Each algorithm requires a specific amount of energy to run. This amount is its <b>energy complexity</b>.
+                    The energy complexity of an algorithm depends on the number of elementary operations performed (time complexity)
+                    and the efficiency of the hardware on which it is running. 
                     Algorithms with lower time complexity generally consume less energy because they perform fewer operations.
+                    Therefore, energy complexity is directly proportional to time complexity.
                 </p>
             </section>
 
@@ -64,7 +66,7 @@
                     <li>
                         <p>
                             Using algorithms with lower time complexity whenever possible. 
-                            For example, to process graphs, the Dijkstra's algorithm (<i>O(V²)</i>) has a higher time complexy than the Fibonacci heap implementation (<i>O(E + V log V)</i>).
+                            For example, in graph processing, the Dijkstra's algorithm (<i>O(V²)</i>) has a higher time complexy than the Fibonacci heap implementation (<i>O(E + V log V)</i>).
                         </p>
                     </li>
                     <li>
