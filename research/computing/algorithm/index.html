@@ -50,39 +50,32 @@
             <section>
                 <h1>An algorithm is a sequence of instructions to perform an action.</h1>
                 <p>
-                    There are several ways to perform an action. 
-                    Each of these ways is a different algorithm, and each algorithm requires a different amount of energy to perform. 
-                    This amount is called <b>energy complexity</b>.
-                </p>
-
-                <p>
-                    The energy complexity of an algorithm depends on the number of operations performed, the type of these operations and the efficiency of the hardware on which it is being executed.
-                    Algorithms with lower time complexity generally consume less energy because they perform fewer operations. 
-                    For example, a merge sort (<i>O(n log n)</i>) is more energy-efficient than a bubble sort (<i>O(n²)</i>) for large datasets.
+                    Each algorithm requires a different amount of energy to execute. This amount is its <b>energy complexity</b>.
+                    The energy complexity of an algorithm depends on the number of operations performed, the type of those operations, and the efficiency of the hardware on which it is running. 
+                    Algorithms with lower time complexity generally consume less energy because they perform fewer operations.
                 </p>
             </section>
 
 
             <section>
-                <h2>Some ways to reduce energy complexity in algorithms and data structures</h2>
+                <h3>Some ways to reduce energy complexity in algorithms and data structures</h3>
 
                 <ul>
                     <li>
                         <p>
                             Using algorithms with lower time complexity whenever possible. 
-                            For example, when processing graphs, Dijkstra's algorithm (<i>O(V²)</i>) can be replaced by the Fibonacci heap implementation (<i>O(E + V log V)</i>).
+                            For example, to process graphs, the Dijkstra's algorithm (<i>O(V²)</i>) has a higher time complexy than the Fibonacci heap implementation (<i>O(E + V log V)</i>).
                         </p>
                     </li>
                     <li>
                         <p>
-                            Using approximation algorithms when exact solutions are computationally expensive. 
-                            For example, approximate nearest-neighbour algorithms significantly reduce energy complexity in high-dimensional data searches.
+                            Using approximation algorithms when exact solutions are computationally expensive and not necessary. 
+                            For example, approximate nearest-neighbour algorithms can reduce energy complexity in high-dimensional data searches.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Reducing precision in machine learning tasks. 
-                            For instance, using 16-bit floating-point operations instead of 32-bit reduces energy complexity with minimal accuracy loss.
+                            Reducing precision in machine learning tasks, such as using 16-bit floating-point operations instead of 32-bit.
                         </p>
                     </li>
                     <li>
