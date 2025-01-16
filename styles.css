@@ -36,13 +36,13 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin: 0.5rem 0;
 }
 
 h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
     margin-top: 0.5rem;
 }
@@ -233,22 +233,31 @@ code {
     width: 100%;
 }
 
+.circle {
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--text-color);
+    border-radius: 50%;
+    background-color: var(--background-color);
+}
+
 .square {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     border: 1px solid var(--text-color);
     background-color: var(--grey);
 }
 
-.circle {
-    width: 125px;
-    height: 125px;
-    border: 1px solid var(--text-color);
-    border-radius: 50%;
-    background-color: var(--background-color);
+.couting-circles-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
 }
 
 .wason-card-container {
@@ -385,6 +394,11 @@ footer a {
 
     .main-photo-caption {
         padding: 0 2rem;
+    }
+
+    .couting-circles-container {
+        flex-direction: column;
+        gap: 2rem;
     }
 
     footer container {
