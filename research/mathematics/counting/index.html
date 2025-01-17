@@ -43,6 +43,9 @@
                 <a href="/research/mathematics/number">number</a>
             </li>
             <li>
+                <a href="/research/mathematics/probability/">probability</a>
+            </li>
+            <li>
                 <a href="/research/mathematics/statistics">statistics</a>
             </li>
         </ul>
@@ -77,13 +80,13 @@
                 <h2>Counting regions</h2>
                 <p>This is an interesting combinatorial problem that can be solved in a simple way.</p>
                 <p>
-                    One hundred points are distributed over a circunference.
-                    The segment connecting any two of these points does not pass through the intersection point of two other segments.
+                    One hundred points are distributed over a circumference. 
+                    The segment connecting any two of these points does not pass through the intersection point of two other segments. 
                     Into how many regions is the circle divided when all one hundred points are connected?
                 </p>
 
                 <p>
-                    Let us first try to solve the problem with a smaller number of points. Examining cases 2, 3, 4 and 5 points, we can observe that:
+                    Let us first try to solve the problem with a smaller number of points. Examining cases with 2, 3, 4, and 5 points, we can observe that:
                 </p>
 
                 <ul>
@@ -102,8 +105,8 @@
                 </ul>
 
                 <p>
-                    The results lead us to believe that 6 points would provide  \( 2^5 = 32 \) regions, 
-                    However, when we directly check what happens with 6 points, we see that 31 regions are determined, not 32. Therefore, the intended generalization is not true.
+                    The results lead us to believe that 6 points would generate  \( 2^5 = 32 \) regions, 
+                    However, when we directly check what happens with 6 points, we see that 31 regions are generated, not 32. Therefore, the intended generalisation is not true.
                 </p>
             </section>
 
@@ -113,8 +116,7 @@
                 </h3>
 
                 <p>
-                    The segments connecting points in pairs will be called <b>diagonals</b>. 
-                    Since for every two points we have a diagonal, their number is
+                    The segments connecting points in pairs will be called <b>diagonals</b>. Since for every two points we have a diagonal, their number is
                 </p>
 
                 <div class="center">
@@ -124,7 +126,7 @@
                 </div>
 
                 <p>
-                    and the number of intersection points of the diagonals is 
+                    and the number of intersection points of the diagonals is
                 </p>
 
                 <div class="center">
@@ -137,10 +139,12 @@
                     since every 4 points determine two diagonals, which have one point in common.
                 </p>
 
-                <p>Now we will describe a process that allows us to obtain the number of regions by successively eliminating diagonals.</p>
+                <p>
+                    Now we will describe a process that allows us to obtain the number of regions by successively eliminating diagonals.
+                </p>
 
                 <p>
-                    When we remove one of the diagonals, the number of regions will decrease, since two regions that have a segment of the removed diagonal in common merge into a single region.
+                    When we remove one of the diagonals, the number of regions will decrease, since two regions that share a segment of the removed diagonal merge into a single region. 
                     Note that, in this process, the number of intersection points of each diagonal with those that have not yet been removed is considered. 
                     At the end, when all diagonals are successively removed, this number is equal to the total number of intersection points of all diagonals, that is,
                 </p>
@@ -163,27 +167,17 @@
                 </div>
 
                 <p>
-                    plus as many installments equal to 1 as there are diagonals, then,
+                    plus as many terms equal to 1 as there are diagonals. Thus,
                 </p>
 
                 <div class="center">
                     $$
-                    C(100,2) = \binom{100}{2}
+                    1 + \binom{100}{2} + \binom{100}{4} = 3,926,176
                     $$
                 </div>
 
                 <p>
-                    Therefore, the initial number of regions, which is equal to the number of eliminated regions plus one (the one remaining at the end of the process) is given by
-                </p>
-
-                <div class="center">
-                    $$
-                    \binom{100}{0} + \binom{100}{2} + \binom{100}{4} = 3,926,176
-                    $$
-                </div>
-
-                <p>
-                    <i>Note</i>: For <i>n</i> points, we have the same expression, just replacing 100 to <i>n</i>.
+                    <i>Note</i>: For <i>n</i> points, we have the same expression, simply replacing 100 with <i>n</i>.
                 </p>
             </section>
 

@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../../../media/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <title>Probability - Isabela de Matos</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+            <li>
+                <a href="/">about</a>
+            </li>
+            <li>
+                <strong><a href="/research">research</a></strong>
+            </li>
+            <li>
+                <a href="/photography">photography</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/research/computing">computing</a>
+            </li>
+            <li>
+                <a href="/research/linguistics">linguistics</a>
+            </li>
+            <li>
+                <strong><a href="/research/mathematics">mathematics</a></strong>
+            </li>
+            <li>
+                <a href="/research/philosophy">philosophy</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/research/mathematics/counting/">counting</a>
+            </li>
+            <li>
+                <a href="/research/mathematics/number">number</a>
+            </li>
+            <li>
+                <strong><a href="/research/mathematics/probability/">probability</a></strong>
+            </li>
+            <li>
+                <a href="/research/mathematics/statistics">statistics</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <content>
+            <section>
+                <h1>Probability is a numerical representation of how likely an event is to occur.</h1>
+                <p>
+                    A random experiment is any experiment whose outcome cannot be predicted. 
+                    The set of all possible outcomes of a random experiment is called the <b>sample space</b>, and an <b>event</b> is any subset of the sample space.
+                </p>
+                <p>
+                    Simply put, given a random experiment and two events from it, say A and B, we say that the probability of event A occurring, 
+                    given that we are already certain event B occurs, is a <b>conditional probability</b>.
+                </p>
+            </section>
+
+            <section>
+                <h2>Intuition and Probability</h2>
+
+                <p>
+                    In some cases, especially those involving conditional probability, calculations may contradict our intuition. Here is an example of such a situation:
+                </p>
+
+                <p>
+                    In a country, 10% of the population is carrying a virus. A test to detect the presence of the virus has 90% accuracy when applied to carriers and 80% accuracy when applied to non-carriers. 
+                    What percentage of people actually carry the virus among those whom the test classified as carriers?
+                </p>
+
+                <p>
+                    Let us see a solution that does not cite statistical theorems.
+                </p>
+
+                <p>
+                    Assume that the test was applied to the <i>N</i> inhabitants of the country. The number of tests that indicated the presence of the virus was:
+                </p>
+
+                <p>
+                    0,9 × 0,1 × <i>N</i> + 0,2 × 0,9 × <i>N</i> = 0,09 <i>N</i> + 0,18 <i>N</i> = 0,27 <i>N</i>
+                </p>
+                
+                <p>
+                    where the first portion represents the 90% who are actually carriers and the second portion represents the 20% who are not carriers. 
+                    Therefore, of the total, 0.27 <i>N</i>, 0.09 <i>N</i> are carriers.
+                </p>
+
+                <p>
+                    So, 0.09 <i>N</i> / 0.27 <i>N</i> = 1/3 ≈ 33.3% of the people whom the test classified as carriers are actually carriers of the virus.
+                </p>
+
+                <p>
+                    This number shows that a person who has taken the test and been classified as a carrier has a high chance of being a false positive.
+                    Typically, when a person takes a test of this type and the result is positive, doctors recommend a new test.
+                </p>
+            </section>
+
+            <section class="page-size">
+                <p>4.53 kB</p>
+            </section>
+        </content>
+    </main>
+    
+    <footer>
+      <container>
+        <div class="left">
+            <p>&copy; Isabela de Matos</p>
+            <p><b>isabela [at] dematos [dot] dev</b></p>
+        </div>
+        <div class="right">
+            <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">BY-NC-SA4.0</a></p>
+        </div>
+      </container>
+    </footer>
+  </body>
+</html>
