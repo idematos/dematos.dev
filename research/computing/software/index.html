@@ -91,13 +91,25 @@
                     E \approx \Delta t \left ( \dfrac{P(t_0) + P(t_N)}{2} + \sum ^{N-1} _{k=1} P(t_k) \right )
                     $$
                 </div>
-                <p>This estimation can be easily done in Python with the <a href="https://numpy.org/">numpy</a> package:</p>
+                <p>
+                    This estimation can easily be done in Python using the <a href="https://numpy.org/doc/stable/reference/generated/numpy.trapezoid.html">numpy</a> 
+                    or <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.trapezoid.html#scipy.integrate.trapezoid">scipy</a> packages:
+                </p>
 
                 <code>
                     <pre>
-import numpy as np
+# Parameters:
+# power_sample (array-like): Power measurements taken at 
+#                            corresponding time points.
+# timestamps (array-like): Time points at which the power measurements
+#                          were recorded. Must have the same length
+#                          as power_sample.
 
-energy_consumption = np.trapz(power_sample, timestamps)
+import numpy as np
+import scipy as sp
+
+np_energy_consumption = np.trapezoid(power_sample, timestamps)
+sp_energy_consumption = sp.integrate.trapezoid(power_sample, timestamps)
                     </pre>
                 </code>
 
