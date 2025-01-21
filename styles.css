@@ -234,8 +234,8 @@ code {
 }
 
 .circle {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     border: 1px solid var(--text-color);
     border-radius: 50%;
     background-color: var(--background-color);
@@ -245,8 +245,8 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     border: 1px solid var(--text-color);
     background-color: var(--grey);
 }
