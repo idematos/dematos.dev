@@ -58,20 +58,19 @@
 
                 <h3>Devices</h3>
                 <p>
-                    The power consumption of devices depends primarily on the CPU (main processor), GPU (graphics processing unit), network, and display, 
-                    the latter being relatively constant and under the user's control (by adjusting screen time and brightness). The energy efficiency of 
-                    CPU, GPU, and network hardware can vary and can be optimised by web developers. 
+                    The power consumption of devices depends primarily on the CPU (main processor), GPU (graphics processing unit), network, and display.
+                    The latter is relatively constant and under the user's control (by adjusting screen time and brightness). The energy efficiency of 
+                    CPU, GPU, and network hardware can vary more and can be optimised by web developers. 
                 </p>
                 <p>
-                    The performances of the CPU and GPU are automatically 
-                    adjusted by the system based on tasks that are being processed. This is done by turning certain components on/off and modifying 
-                    their <a href="https://en.wikipedia.org/wiki/Clock_rate" target="_blank">clock rate</a>. 
+                    The performances of the CPU and GPU are automatically adjusted by the system based on tasks that are being processed. 
+                    This is done by turning certain components on/off and modifying their <a href="https://en.wikipedia.org/wiki/Clock_rate" target="_blank">clock rate</a>. 
                     Therefore, reducing the amount of time spent in high-power states and let the hardware return to idle mode as much 
-                    as possible can reduce power consumption on devices. This can be done by: reducing the use of timers, 
+                    as possible can reduce power consumption on devices. This can be done by reducing the use of timers, 
                     <a href="https://webkit.org/blog/8582/intersectionobserver-in-webkit/" target="_blank">running animations only when visible</a>, 
                     prioritizing CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">animations</a> and 
                     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions" target="_blank">transitions</a> over JavaScript ones, and using 
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank">WebSockets</a>  instead of network polling.
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank">WebSockets</a> instead of network polling.
                 </p>
 
                 <h3>Network</h3>
@@ -79,7 +78,7 @@
                     Transmitting data over the web involves routers, content delivery networks (CDNs), and mobile networks. 
                     Routers process and forward data packets, CDNs are used to store and deliver data closer to users, and 
                     mobile networks transmit data to/from wireless devices. Therefore, reducing the amount of data exchanged 
-                    between users and servers can reduce network energy usage. This can be done by: using caching, reducing API calls, 
+                    between users and servers can reduce network energy usage. This can be done by using caching, reducing API calls, 
                     and minimizing payload sizes.
                 </p>
 
@@ -87,9 +86,8 @@
                 <p>
                     Data centres house servers that store, process, and serve web content. 
                     The main contributors to energy usage are server operations (running application logic, managing databases, and rendering content), 
-                    cooling systems (maintaining optimal temperatures for server performance), and idle power usage. 
-                    Reducing the complexity and size of web pages can reduce server energy consumption. 
-                    This can be done by: compressing media, using lazy loading, and reducing computational overhead in JavaScript.
+                    cooling systems, and idle power usage. Reducing the complexity and size of web pages can reduce server operations. 
+                    This can be done by compressing media, using lazy loading, and reducing computational overhead in JavaScript.
                 </p>
             </section>
 
