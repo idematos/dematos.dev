@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../../../styles.css" />
     <title>Sequence - Isabela de Matos</title>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body>
     <header>
@@ -65,18 +66,176 @@
                 <div class="rabbits"></div>
                 <div class="main-photo-caption">
                     <p>Liber Abaci</p>
-                    <p>0250123</p>
+                    <p>0250124</p>
                 </div>
             </div>
 
             <section>
-                <h1>Sequence.</h1>
-
+                <h1>A sequence is a function whose domain is a countable ordered set.</h1>
+                <p>
+                    It can be identified by a recurrence relation or by a closed-form expression.
+                    A recurrence (relation) for a sequence is an expression that allows us to calculate a term of the sequence in terms of its previous terms,
+                    while the closed-form expression is a direct relationship between the index of the term and its value.
+                </p>
             </section>
 
+            <section>
+                <h2>Fibonacci Sequence</h2>
+                <p>
+                    In the book Liber Abaci, Leonardo Fibonacci presented the following problem:
+                </p>
+
+                <p>
+                    <i>
+                        A pair of rabbits becomes productive after two months of life and, from then on, produces a new pair every month. 
+                        Starting with a single pair of newborn rabbits, how many pairs will there be at the end of a year?
+                    </i>
+                </p>
+
+                <p>
+                    Let us designate with \(f_n\) the number of pairs of rabbits existing after <i>n</i> months. 
+                    Evidently, \(f_0 = f_1 = 1\). On the other hand, the number of pairs existing in the <i>n</i>-th month, \(f_n\), 
+                    is equal to the number existing one month before, \(f_{n-1}\), plus the number of new births. 
+                    Now, this number is precisely the number of pairs existing two months ago, \(f_{n-2}\), 
+                    which are at least two months old and therefore able to reproduce. 
+                    Therefore, each element of the Fibonacci sequence is the sum of the two preceding ones. Since we already know that \(f_0 = f_1 = 1\), 
+                    we can construct it: 
+                </p>
+
+                $$
+                f_0 = 1,
+                $$
+                $$
+                f_1 = 1, 
+                $$
+                $$
+                f_2 = f_0 + f_1 = 2, 
+                $$
+                $$
+                f_3 = f_1 + f_2 = 3, 
+                $$
+                $$
+                f_4 = f_2 + f_3 = 5, 
+                $$
+                $$
+                f_5 = f_3 + f_4 = 8, 
+                $$
+                $$
+                f_6 = f_4 + f_5 = 13, 
+                $$
+                $$
+                \ldots
+                $$
+
+                <p>
+                    that is,
+                </p>
+
+                <div class="center">
+                    $$
+                    1, \ 1, \ 2, \ 3, \ 5, \ 8, \ 13, \ 21, \ 34, \ 55, \ 89, \ 144, \ldots
+                    $$
+                </div>
+
+                <p>
+                    Answering the problem, there will be 144 pairs of rabbits at the end of a year.
+                </p>
+            </section>
+
+            <section>
+                <h3>The Closed-Form Expression</h3>
+                
+                <p>
+                    Let us look for the general term of the sequence with an ansatz.
+                    We start by ignoring the values of \(f_0\) and \(f_1\) and look for a particular solution of the form \(f_n= x^n\) for the recurrence
+                </p>
+                
+                <div class="center">
+                    $$
+                    f_n = f_{n-1} + f_{n-2}
+                    $$
+                </div>
+
+                <p>
+                    It follows that \(x^n = x^{n-1} + x^{n-2} \) and, dividing both sides by \( x^{n-2} \), we obtain the equation
+                </p>
+
+                <div class="center">
+                    $$
+                    x^2 = x + 1
+                    $$
+                </div>
+
+                <p>
+                    which has solutions \(x_1 = \frac{1+\sqrt{5}}{2} \) and \(x_2 = \frac{1-\sqrt{5}}{2}\).
+                </p>
+
+                <p>
+                    Finally, considering the values of \(f_0\) and \(f_1\), we will look for a solution of the form
+                </p>
+
+                <div class="center">
+                    $$
+                    \begin{align}
+                    f_n & = c_1x_1 ^n + c_2x_2 ^n \\
+                    & = c_1 \left (\frac{1+\sqrt{5}}{2} \right ) ^n + c_2 \left (\frac{1-\sqrt{5}}{2} \right ) ^n
+                    \end{align}
+                    $$
+                </div>
+
+                <p>
+                    Replacing <i>n</i> by 0 and 1, respectively, and noting that \( r^0 _1 = r^0 _2 = 1 \), we have:
+                </p>
+
+                <div class="center">
+                    $$
+                    \begin{cases}
+                    c_1 + c_2 = 0 \\
+                    c_1 \left (\frac{1+\sqrt{5}}{2} \right )  + c_2 \left (\frac{1-\sqrt{5}}{2} \right )  = 1
+                    \end{cases}
+                    $$
+                </div>
+
+                <p>
+                    Therefore, \( c2 = -c1 \) and substituting this into the second equation of the system we obtain
+                </p>
+
+                <div class="center">
+                    $$
+                    \begin{align}
+                    c_1 & \left (\frac{1+\sqrt{5}}{2} \right )  - c_2 \left (\frac{1-\sqrt{5}}{2} \right )  = 1 \\
+                    & \Longrightarrow c_1 \left ( \frac{ 1+\sqrt{5} - (1-\sqrt{5})}{2} \right ) = 1 \\
+                    & \Longrightarrow c_1 \left ( \frac{ 2\sqrt{5}}{2} \right ) = 1 \\
+                    & \Longrightarrow c_1 = \frac{1}{\sqrt{5}}
+                    \end{align}
+                    $$
+                </div>
+
+                <p>
+                    Finally, we conclude that
+                </p>
+
+                <div class="center">
+                    $$
+                    f_n = \dfrac{1}{\sqrt{5}} \left ( \left (\frac{1+\sqrt{5}}{2} \right ) ^n - \left (\frac{1-\sqrt{5}}{2} \right ) ^n \right )
+                    $$
+                </div>
+
+                <p>
+                    It may seem odd, but for every natural number <i>n</i> the result of the expression above is a natural number, precisely the <i>n</i>-th Fibonacci number.
+                </p>
+            </section>
+
+            <section>
+                <ul>
+                    <li>
+                        <a href="https://archive.org/details/laurence-sigler-fibonaccis-liber-abaci-2003" target="_blank">Liber Abaci</a>
+                    </li>
+                </ul>
+            </section>
 
             <section class="page-size">
-                <p>4.53 kB</p>
+                <p>104.53 kB</p>
             </section>
         </content>
     </main>
