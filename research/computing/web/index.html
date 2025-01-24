@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../../../media/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <title>Web - Isabela de Matos</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+            <li>
+                <a href="/">about</a>
+            </li>
+            <li>
+                <strong><a href="/research">research</a></strong>
+            </li>
+            <li>
+                <a href="/photography">photography</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong><a href="/research/computing">computing</a></strong>
+            </li>
+            <li>
+                <a href="/research/linguistics">linguistics</a>
+            </li>
+            <li>
+                <a href="/research/mathematics">mathematics</a>
+            </li>
+            <li>
+                <a href="/research/philosophy/">philosophy</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="/research/computing/algorithm/">algorithm</a>
+            </li>
+            <li>
+                <a href="/research/computing/software/">software</a>
+            </li>
+            <li>
+                <strong><a href="/research/computing/web/">web</a></strong>
+            </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <content>
+            <section>
+                <h1>Websites can drain energy at multiple levels.</h1>
+                <p>
+                    This includes end-user devices, network infrastructure, and servers. 
+                </p>
+
+                <h3>Devices</h3>
+                <p>
+                    The power consumption of devices depends on the CPU (main processor), GPU (graphics processing unit), network, and display. 
+                    The display's power consumption is relatively constant and under the user's control (through adjustments to screen time and brightness). 
+                    However, the CPU, GPU, and network hardware can have a significant variability in power consumption. 
+                    The system adjusts the performance of the CPU and GPU based on the tasks being processed at a given time, including rendering webpages. 
+                    This is made by turning certain components on or off and modifying their <a href="https://en.wikipedia.org/wiki/Clock_rate" target="_blank">clock rate</a>. 
+                    So, the greater the performance demanded of the chips, the less energy efficient they become. 
+                </p>
+
+                <p>
+                    Reducing the amount of time spent in high-power states, and letting the hardware go back to idle as much as possible can significantly reduce energy consumption.
+                    This can be done by reducing the use of timers, <a href="https://webkit.org/blog/8582/intersectionobserver-in-webkit/" target="_blank">running animations only when visible</a>, 
+                    prioritising CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">animations</a> and 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions" target="_blank">transitions</a> over script-driven ones, 
+                    and <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank">WebSockets</a> over network polling.
+                </p>
+
+                <h3>Network</h3>
+                <p>
+                    Transmitting data over the Internet involves routers and switches, content delivery networks (CDNs), and mobile networks.
+                    Routers and switches consume energy to process and forward data packets, CDNs are used to cache and deliver data closer to users,
+                    and mobile networks consume energy to transmit data to and from wireless devices.              
+                    Optimising the data exchanged between users and servers can reduce energy use across the network. 
+                    This can be done with caching, reducing unnecessary API calls and minimizing payload sizes.
+                </p>
+
+                <h3>Servers</h3>
+                <p>
+                    Data centers house servers that store, process, and serve web content. The major contributors to energy use are
+                    server operations (run application logic, manage databases, and render content), cooling systems
+                    (maintain optimal temperatures for server performance), and idle power usage.
+                    Reducing the complexity and size of webpages can significantly reduce energy consumption on both user devices and servers.
+                    This can be done by compressing media, using lazy loading, and reducing computational overhead in JavaScript.
+                </p>
+            </section>
+
+            <section class="resources">
+                <ul>
+                    <li>
+                        <a href="https://webkit.org/blog/8993/cpu-timeline-in-web-inspector/" target="_blank">CPU Timeline in Web Inspector</a>
+                    </li>
+                    <li>
+                        <a href="https://ecograder.com/" target="_blank">Ecograder</a>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="page-size">
+                <p>4.21 kB</p>
+            </section>
+        </content>
+    </main>
+    
+    <footer>
+      <container>
+        <div class="left">
+            <p>&copy; Isabela de Matos</p>
+            <p><b>isabela [at] dematos [dot] dev</b></p>
+        </div>
+        <div class="right">
+            <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank">BY-NC-SA4.0</a></p>
+        </div>
+      </container>
+    </footer>
+  </body>
+</html>
