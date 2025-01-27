@@ -138,7 +138,7 @@ nav ul li a {
     font-size: 1.1rem;
     text-decoration: none;
     border: none;
-    opacity: 0.65;
+    opacity: 0.7;
 }
 
 nav ul li a:hover {
@@ -201,6 +201,11 @@ card {
     gap: 0.5rem;
     width: 100%;
     padding: 0.5rem 0;
+}
+
+.photo-frame img {
+    height: 570px;
+    width: 920px;
 }
 
 .photo-caption {
