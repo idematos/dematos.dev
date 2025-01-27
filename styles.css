@@ -203,11 +203,6 @@ card {
     padding: 0.5rem 0;
 }
 
-.photo-frame img {
-    height: 570px;
-    width: 920px;
-}
-
 .photo-caption {
     display: flex;
     flex-direction: row;
