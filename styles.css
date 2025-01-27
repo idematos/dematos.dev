@@ -138,11 +138,12 @@ nav ul li a {
     font-size: 1.1rem;
     text-decoration: none;
     border: none;
+    opacity: 0.65;
 }
 
 nav ul li a:hover {
     text-decoration: none;
-    border-bottom: 1px solid var(--text-color);
+    opacity: 1;
 }
 
 strong {
@@ -346,32 +347,32 @@ footer a {
 
 @media only screen and (max-width: 920px) {
     h1 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         width: 100%;
     }
 
     h2 {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     h3 {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     h4 {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     p {
-        font-size: 0.75rem;
-    }
-    
-    q {
         font-size: 0.8rem;
     }
     
+    q {
+        font-size: 0.85rem;
+    }
+    
     cite {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
 
     code {
@@ -390,6 +391,7 @@ footer a {
 
     nav ul li a {
         font-size: 0.75rem;
+        opacity: 1;
     }
 
     content {
