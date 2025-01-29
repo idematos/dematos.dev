@@ -93,6 +93,8 @@
                     Let us first try to solve the problem with a smaller number of points. Examining cases with 2, 3, 4, and 5 points, we can observe that:
                 </p>
 
+                <div class="regions"></div>
+
                 <ul>
                     <li>
                         <p>2 points generate \( 2 = 2^1 \) regions.</p>
@@ -112,9 +114,9 @@
                     The results lead us to believe that 6 points would generate  \( 2^5 = 32 \) regions, 
                     However, when we directly check what happens with 6 points, we see that 31 regions are generated, not 32. Therefore, the intended generalisation is not true.
                 </p>
-            </section>
 
-            <section>
+                <div class="region-6"></div>
+
                 <h3>
                     Developing a formula that provides the number of regions obtained with 100 points
                 </h3>
@@ -125,7 +127,7 @@
 
                 <div class="center">
                     $$
-                    C(100,2) = \binom{100}{2}
+                    C(100,2) = \binom{100}{2} = \dfrac{100\times 99}{2} = 4,950
                     $$
                 </div>
 
@@ -135,7 +137,11 @@
 
                 <div class="center">
                     $$
-                    C(100,4) = \binom{100}{4}
+                    \begin{align}
+                    C(100,4) & = \binom{100}{4} \\ \\
+                    & = \frac{100\times 99\times 98\times 97}{4 \times 3 \times 2} \\ \\
+                    & = 3,921,225
+                    \end{align}
                     $$
                 </div>
 
@@ -155,7 +161,7 @@
 
                 <div class="center">
                     $$
-                    C(100,4) = \binom{100}{4}
+                    C(100,4) = 3,921,225
                     $$
                 </div>
 
@@ -166,7 +172,7 @@
 
                 <div class="center">
                     $$
-                    C(100,4) = \binom{100}{4}
+                    C(100,4) = 3,921,225
                     $$
                 </div>
 
@@ -176,7 +182,7 @@
 
                 <div class="center">
                     $$
-                    1 + \binom{100}{2} + \binom{100}{4} = 3,926,176
+                    1 + C(100,2) + C(100,4) = 3,926,176
                     $$
                 </div>
 
@@ -186,7 +192,7 @@
             </section>
 
             <section class="page-size">
-                <p>304.22 kB</p>
+                <p>354.22 kB</p>
             </section>
         </content>
     </main>
