@@ -306,6 +306,32 @@ code {
     background-color: var(--text-color);
 }
 
+.regions {
+    display: inline-block;
+    width: 100%;
+    aspect-ratio: 2;
+    mask-image: url('media/research/regions.svg');
+    -webkit-mask-image: url('media/research/regions.svg');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background-color: var(--text-color);
+}
+
+.region-6 {
+    display: inline-block;
+    width: 100%;
+    aspect-ratio: 2;
+    mask-image: url('media/research/region6.svg');
+    -webkit-mask-image: url('media/research/region6.svg');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    background-color: var(--text-color);
+}
+
 .page-size, .resources {
     padding-top: 2rem;
 }
