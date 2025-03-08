@@ -1,7 +1,2 @@
-pages:
-  script:
-    - mkdir public
-    - cp -r * public
-  artifacts:
-    paths:
-      - public
+# The Docker image that will be used to build your app
+image: .gitlab-ci.yml
