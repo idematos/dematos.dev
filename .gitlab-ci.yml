@@ -1,2 +1,13 @@
-# The Docker image that will be used to build your app
-image: .gitlab-ci.yml
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp -r * public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
