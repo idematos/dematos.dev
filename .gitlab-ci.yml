@@ -5,7 +5,7 @@ pages:
   stage: deploy
   script:
     - mkdir -p public
-    - cp -r * public
+    - cp -r $(ls | grep -v public) public/
   artifacts:
     paths:
       - public
