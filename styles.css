@@ -169,8 +169,8 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0.15rem 4rem;
-    gap: 1rem;
+    padding: 0 4rem;
+    gap: 0.8rem;
 }
 
 card {
@@ -443,7 +443,7 @@ footer a {
     }
 
     ul li {
-        padding: 0.15rem 0;
+        padding: 0.1rem 0;
     }
 
     .main-photo-caption {
