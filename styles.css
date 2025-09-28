@@ -5,7 +5,8 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: Garamond, serif;
     line-height: 1.55;
     letter-spacing: 1.5;
     margin: 0;
