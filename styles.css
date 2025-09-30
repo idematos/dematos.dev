@@ -17,7 +17,7 @@ body {
     --light-grey: #D9D9D9;
     --dark-grey: #323232;
     --black-wash: #0C0C0C;
-    --green: #6be4c1;
+    --green: #9BAE9F;
 
     /* Light theme */
     --background-color: var(--sand);
@@ -29,13 +29,13 @@ body {
 }
 
 ::selection {
-    background: var(--green);   
-    color: var(--black-wash);      
+    background: var(--green);  
+    color: var(--black-wash);
 }
 
 ::-moz-selection {
-    background: var(--green);   
-    color: var(--black-wash);   
+    background: var(--green);
+    color: var(--black-wash);
 }
 
 h1 {
