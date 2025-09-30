@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 0.5rem 0;
 }
@@ -55,18 +55,19 @@ h2 {
 h3 {
     font-size: 1.15rem;
     font-weight: 600;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 h4 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 600;
-    margin-top: 0.3rem;
+    margin: 0.3rem 0;
 }
 
 p {
     font-size: 1.1rem;
     font-weight: 400;
+    margin-bottom: 0.2rem;
 }
 
 q {
